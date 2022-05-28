@@ -20,7 +20,7 @@ Table of Contents
 # Resource
 
 ## Resource Plan
-- Cloud Build (free)
+- ~~Cloud Build (free)~~
 - Cloud Storage
 - Cloud Run
 - Cloud SQL
