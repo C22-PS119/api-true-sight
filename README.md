@@ -41,7 +41,7 @@ from Cloud Run load model from Cloud Storage, connect to Cloud SQL, serve REST A
 ```
 
 ## Resource Diagram
-[Diagram.pdf](https://raw.githubusercontent.com/C22-PS119/api-true-sight/main/GCP.pdf)
+![Diagram](https://raw.githubusercontent.com/C22-PS119/api-true-sight/main/GCP.drawio.png)
 
 # Organization Setup
 
