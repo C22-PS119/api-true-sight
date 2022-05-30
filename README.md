@@ -20,7 +20,7 @@ Table of Contents
 # Resource
 
 ## Resource Plan
-- ~~Cloud Build (free)~~
+- Cloud Build (120hour)
 - Cloud Storage
 - Cloud Run
 - Cloud SQL
@@ -41,7 +41,7 @@ from Cloud Run load model from Cloud Storage, connect to Cloud SQL, serve REST A
 ```
 
 ## Resource Diagram
-[Diagram.pdf](https://raw.githubusercontent.com/C22-PS119/api-true-sight/main/GCP.pdf)
+![Diagram](https://raw.githubusercontent.com/C22-PS119/api-true-sight/main/GCP.png)
 
 # Organization Setup
 
@@ -109,7 +109,6 @@ Nice
 We must modify API based on android requirement or teams suggestion
 
 # References
-FastAPI Docs - https://fastapi.tiangolo.com/
 
 Loading tfmodel pb/h5 - https://stackoverflow.com/questions/67929823/fastapi-loading-model-pb-savedmodel-file-does-not-exist-error
 
