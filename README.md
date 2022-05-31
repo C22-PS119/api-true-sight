@@ -10,26 +10,19 @@ Table of Contents
     * [Billing Cost](#billing-cost)
     * [Role IAM](#role-iam)
   * [API Development](#api-development)
-    * [Create API](#create-api)
-    * [Test in local](#test-in-local)
-    * [Deploy](#deploy)
-    * [API Docs](#api-docs)
-    * [API Maintenance](#api-maintenance)
   * [References](#references)
 
 # Resource
 
 ## Resource Plan
-- Cloud Build (120hour)
+- Cloud Build
 - Cloud Storage
 - Cloud Run
 - Cloud SQL
 
 ## Resource Story
 ```bash
-inside Cloud Storage upload model.pb or model.h5
-
-if filesize is too big we may use cloud shell and clone git repo instead
+inside Cloud Storage upload machine learning model
 
 then
 
@@ -48,13 +41,15 @@ from Cloud Run load model from Cloud Storage, connect to Cloud SQL, serve REST A
 ## General
 1. Organization name => C22-PS119
 2. Project name => TRUE SIGHT
-3. Prefered location => Asia/Jakarta/Singapore
+3. Project ID => advance-branch-351506
+4. Prefered location => US Lowcost/Asia/Jakarta/Singapore
 
 ## Billing Cost
-Not sure, because we always got lot of discount here... and it may different with GCP account/credit given from bangkit in future... so we can just estimate based on GCP calculator
+We estimate based on GCP calculator
 
 [See our GCP Calculator details](https://cloud.google.com/products/calculator/#id=98cce779-e7d3-4d5b-b340-d9c99eb8fe9c)
 
+- Cloud Build
 - Cloud Storage $0.23
 - Cloud SQL $66
 - Cloud Run $0
@@ -62,61 +57,34 @@ Not sure, because we always got lot of discount here... and it may different wit
 Why cloud run price is $0 ??
 => https://cloud.google.com/run/pricing#billable_time
 
+Some of this service have [free tier starter](https://cloud.google.com/free/docs/gcp-free-tier#free-tier-usage-limits)
+
 ```
 TLDR
+Cloud Build free 120hour build time/month we think is enough since it only used when pushing new container/revision
 
 If API/web traffic is not exceed specific amount we won't charged, that's why we choose cloud run
-```
 
 Why cloud SQL have highest cost ??
 => Of course it run 24/7
+```
+
 
 Total cost $66.55 / month
 
 Total cost Rp959,217.58 / month
 
-GCP Trial account credit is $300 we can keep all service running around 3 month++
+GCP Bangkit credit is $250 we can keep all service running around 3 month++
 
 ## Role IAM
-We think everyone can join in this GCP and explore all things here with editor/owner role, we can invite everyone with team email addresses
+We think everyone can join in this GCP and explore all things here with owner role, we can invite everyone with team email addresses
 
 # API Development
-
-## Create API
-Set set set voila
-
-## Test in local
-It works
-
-## Deploy
-Currently we can deploy this on repl.it (free & ez setup)
-
-Deploying to GCP with size based on [current GCP Calculator](https://cloud.google.com/products/calculator/#id=98cce779-e7d3-4d5b-b340-d9c99eb8fe9c)
-
-```bash
-create cloud storage instance
-upload ML model
-create SQL Instance
-we may need SQL account credentials
-create container for cloud run
-create cloud run with connection to cloud sql
-```
-
-## API Docs
-Nice
-
-## API Maintenance
-We must modify API based on android requirement or teams suggestion
+[Flask REST Service Repository](https://github.com/C22-PS119/flask_true_sight)
 
 # References
 
-Loading tfmodel pb/h5 - https://stackoverflow.com/questions/67929823/fastapi-loading-model-pb-savedmodel-file-does-not-exist-error
+Free Tier Limit - https://cloud.google.com/free/docs/gcp-free-tier#free-tier-usage-limits
 
-What is pb / h5 - https://stackoverflow.com/questions/51278213/what-is-the-use-of-a-pb-file-in-tensorflow-and-how-does-it-work
-
-Predict example - https://medium.com/analytics-vidhya/fastapi-for-serve-simple-deep-learning-models-step-by-step-d054cf240a4c
-
-Naive Bayes Classifier with Scikit-learn - https://www.datacamp.com/tutorial/naive-bayes-scikit-learn
-
-Naive Bayes fake/real example - https://github.com/saiabhiteja/Fakenews-Classifier/blob/main/app.py
+GCP Calculator - https://cloud.google.com/products/calculator
 
