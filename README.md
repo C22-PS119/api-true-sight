@@ -49,8 +49,8 @@ We estimate based on GCP calculator
 
 [See our GCP Calculator details](https://cloud.google.com/products/calculator/#id=98cce779-e7d3-4d5b-b340-d9c99eb8fe9c)
 
-- Cloud Build
-- Cloud Storage $0.23
+- Cloud Build - https://cloud.google.com/build/pricing
+- Cloud Storage $0.23 / GB object
 - Cloud SQL $66
 - Cloud Run $0
 
@@ -61,7 +61,7 @@ Some of this service have [free tier starter](https://cloud.google.com/free/docs
 
 ```
 TLDR
-Cloud Build free 120hour build time/month we think is enough since it only used when pushing new container/revision
+First 120 builds-minutes per day are free
 
 If API/web traffic is not exceed specific amount we won't charged, that's why we choose cloud run
 
