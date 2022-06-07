@@ -22,15 +22,21 @@ Table of Contents
 
 ## Resource Story
 ```bash
-inside Cloud Storage upload machine learning model
+How we doploy flask rest api to Google Cloud Platform ?
 
-then
+We prefer to use GCP Console UI instead of command line/shell
 
-inside Cloud SQL import MySQL Structure and initial data
+We will use Cloud Build connected with github repostiory containing
+our rest api source code, to make a docker container by Dockerfile which is
+automatically submit that docker image to google cloud image registry.
 
-then
+For data source, we will upload model that have been trained by our ML Team to Cloud Storage
+Then for SQL Database, we will use Cloud SQL with MySQL 8 newest version
 
-from Cloud Run load model from Cloud Storage, connect to Cloud SQL, serve REST API, do predict request
+Finally we can create new Cloud Run service with connection to Cloud SQL through unix_socket
+then in our source code we will add some feature to predict through model that was uploaded before
+fortunately python can make call to gs:// filesystem with gcs module
+
 ```
 
 ## Resource Diagram
@@ -87,4 +93,6 @@ We think everyone can join in this GCP and explore all things here with owner ro
 Free Tier Limit - https://cloud.google.com/free/docs/gcp-free-tier#free-tier-usage-limits
 
 GCP Calculator - https://cloud.google.com/products/calculator
+
+How to connect SQL From Cloud Run - https://cloud.google.com/sql/docs/mysql/connect-run
 
