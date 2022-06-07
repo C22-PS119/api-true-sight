@@ -30,10 +30,10 @@ We will use Cloud Build connected with github repostiory containing
 our rest api source code to make a docker container by **Dockerfile** which it
 will automatically submited to google cloud **image registry**.
 
-For data source, we will upload model that have been trained by our ML Team to **Cloud Storage**
-Then for SQL Database, we will use Cloud SQL with MySQL 8 newest version
+For data source, we will upload model that have been trained by our ML Team to **Cloud Storage**, 
+then for SQL Database, we will use Cloud SQL with MySQL 8 newest version
 
-Finally we can create new Cloud Run service with connection to Cloud SQL through `unix_socket`
+Finally we can create new Cloud Run service with connection to Cloud SQL through `unix_socket`, 
 then in our source code we will add some feature to predict through model that was uploaded before
 fortunately python can make call to `gs://` filesystem with gcs module
 
@@ -47,7 +47,7 @@ fortunately python can make call to `gs://` filesystem with gcs module
 1. Organization name => C22-PS119
 2. Project name => TRUE SIGHT
 3. Project ID => advance-branch-351506
-4. Prefered location => US Lowcost/Asia/Jakarta/Singapore
+4. Prefered zone/region => US Lowcost/Asia/Jakarta/Singapore
 
 ## Billing Cost
 We estimate based on GCP calculator
