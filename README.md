@@ -21,23 +21,22 @@ Table of Contents
 - Cloud SQL
 
 ## Resource Story
-```bash
+
 How we doploy flask rest api to Google Cloud Platform ?
 
 We prefer to use GCP Console UI instead of command line/shell
 
 We will use Cloud Build connected with github repostiory containing
-our rest api source code, to make a docker container by Dockerfile which is
-automatically submit that docker image to google cloud image registry.
+our rest api source code to make a docker container by **Dockerfile** which is
+automatically submit that docker image to google cloud **image registry**.
 
-For data source, we will upload model that have been trained by our ML Team to Cloud Storage
+For data source, we will upload model that have been trained by our ML Team to **Cloud Storage**
 Then for SQL Database, we will use Cloud SQL with MySQL 8 newest version
 
-Finally we can create new Cloud Run service with connection to Cloud SQL through unix_socket
+Finally we can create new Cloud Run service with connection to Cloud SQL through `unix_socket`
 then in our source code we will add some feature to predict through model that was uploaded before
-fortunately python can make call to gs:// filesystem with gcs module
+fortunately python can make call to `gs://` filesystem with gcs module
 
-```
 
 ## Resource Diagram
 ![Diagram](https://raw.githubusercontent.com/C22-PS119/api-true-sight/main/GCP.png)
