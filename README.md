@@ -27,8 +27,8 @@ How we doploy flask rest api to Google Cloud Platform ?
 We prefer to use GCP Console UI instead of command line/shell
 
 We will use Cloud Build connected with github repostiory containing
-our rest api source code to make a docker container by **Dockerfile** which is
-automatically submit that docker image to google cloud **image registry**.
+our rest api source code to make a docker container by **Dockerfile** which it
+will automatically submited to google cloud **image registry**.
 
 For data source, we will upload model that have been trained by our ML Team to **Cloud Storage**
 Then for SQL Database, we will use Cloud SQL with MySQL 8 newest version
