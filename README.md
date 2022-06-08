@@ -81,6 +81,10 @@ Total cost Rp959,217.58 / month
 
 GCP Bangkit credit is $250 we can keep all service running around 3 month++
 
+   > You may see our cost and usage is always $0 and got lot of discount/promotion but actually it use the bangkit credit.
+   > So it can be cost $0 but bangkit credit usage is still running. 
+   > To view the full information about billing you should use the 1 account that was [redeemed education token](https://cloud.google.com/edu)
+
 ## Role IAM
 We think everyone can join in this GCP and explore all things here with owner role, we can invite everyone with team email addresses
 
@@ -94,4 +98,6 @@ Free Tier Limit - https://cloud.google.com/free/docs/gcp-free-tier#free-tier-usa
 GCP Calculator - https://cloud.google.com/products/calculator
 
 How to connect SQL From Cloud Run - https://cloud.google.com/sql/docs/mysql/connect-run
+
+GCP Edu program - https://cloud.google.com/edu
 
