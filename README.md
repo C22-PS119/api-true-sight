@@ -5,6 +5,7 @@ Table of Contents
     * [Resource Plan](#resource-plan)
     * [Resource Story](#resource-story)
     * [Resource Diagram](#resource-diagram)
+    * [HOW TO DEPLOY ON GOOGLE CLOUD](#HOW-TO-DEPLOY-ON-GOOGLE-CLOUD)
   * [Organization Setup](#organization-setup)
     * [General](#general)
     * [Billing Cost](#billing-cost)
@@ -40,6 +41,22 @@ fortunately python can make call to `gs://` filesystem with gcs module
 
 ## Resource Diagram
 ![Diagram](https://raw.githubusercontent.com/C22-PS119/api-true-sight/main/GCP.png)
+
+## HOW TO DEPLOY ON GOOGLE CLOUD
+Good News! It's all just an easy step 😉
+
+1. Clone or download [Our Flask API](https://github.com/wahyusa/flask_true_sight) repository
+2. Login and use Google Cloud Console UI
+3. Search for Cloud Build service and enable the Cloud Build API in case you missed it
+4. Connect the clonned repo with Cloud Build
+5. Now we can move to Cloud SQL Service
+6. Create new Cloud SQL Instance it should be easy
+7. Then we move to Cloud Run service, nake sure you enable the API (you will aksed to enable it)
+8. Create new Cloud Run Instance
+9. There is an option, choose **continuos integration** from cloud build
+10. In Connection tab, **DON'T FORGET to connect** with SQL Instance that we've created earlier
+11. Wait for build and deploy process
+12. Voila! it should have URL like `https://xxxx.run.app`
 
 # Organization Setup
 
